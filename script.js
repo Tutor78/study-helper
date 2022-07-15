@@ -31,6 +31,14 @@ function studyInfo() {
     // console.log(studies);
     
     randomStudy = studies[Math.floor(Math.random() * studies.length)];
+
+    if (randomStudy == undefined) {
+        remainingStudiesEl.textContent = 'You are finished!';
+        studyTitleEl.textContent = 'N/A';
+        perspectiveEl.textContent = 'Perspective: Who Cares?';
+        studyLinkEl.textContent = 'There is no link!'
+        studyLinkEl.href = '';
+    }
     
     // console.log(randomStudy);
 
